@@ -31,6 +31,7 @@ namespace POO_22_09_Lanchonetinha
         {
             this.panelEsquerdo = new System.Windows.Forms.Panel();
             this.panelbotões = new System.Windows.Forms.Panel();
+            this.BtnProdutos = new FontAwesome.Sharp.IconButton();
             this.BtnClientes = new FontAwesome.Sharp.IconButton();
             this.BtnConfig = new FontAwesome.Sharp.IconButton();
             this.btnPedido = new FontAwesome.Sharp.IconButton();
@@ -48,21 +49,43 @@ namespace POO_22_09_Lanchonetinha
             this.panelEsquerdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEsquerdo.Location = new System.Drawing.Point(0, 0);
             this.panelEsquerdo.Name = "panelEsquerdo";
-            this.panelEsquerdo.Size = new System.Drawing.Size(159, 450);
+            this.panelEsquerdo.Size = new System.Drawing.Size(159, 527);
             this.panelEsquerdo.TabIndex = 0;
             // 
             // panelbotões
             // 
             this.panelbotões.BackColor = System.Drawing.Color.DarkRed;
             this.panelbotões.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelbotões.Controls.Add(this.BtnProdutos);
             this.panelbotões.Controls.Add(this.BtnClientes);
             this.panelbotões.Controls.Add(this.BtnConfig);
             this.panelbotões.Controls.Add(this.btnPedido);
             this.panelbotões.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelbotões.Location = new System.Drawing.Point(0, 100);
             this.panelbotões.Name = "panelbotões";
-            this.panelbotões.Size = new System.Drawing.Size(159, 350);
+            this.panelbotões.Size = new System.Drawing.Size(159, 427);
             this.panelbotões.TabIndex = 1;
+            // 
+            // BtnProdutos
+            // 
+            this.BtnProdutos.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnProdutos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnProdutos.FlatAppearance.BorderSize = 0;
+            this.BtnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProdutos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnProdutos.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.BtnProdutos.IconColor = System.Drawing.Color.Black;
+            this.BtnProdutos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnProdutos.IconSize = 30;
+            this.BtnProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnProdutos.Location = new System.Drawing.Point(2, 143);
+            this.BtnProdutos.Name = "BtnProdutos";
+            this.BtnProdutos.Size = new System.Drawing.Size(153, 63);
+            this.BtnProdutos.TabIndex = 3;
+            this.BtnProdutos.Text = "Produtos";
+            this.BtnProdutos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnProdutos.UseVisualStyleBackColor = false;
+            this.BtnProdutos.Click += new System.EventHandler(this.BtnProdutos_Click);
             // 
             // BtnClientes
             // 
@@ -97,7 +120,7 @@ namespace POO_22_09_Lanchonetinha
             this.BtnConfig.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnConfig.IconSize = 30;
             this.BtnConfig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnConfig.Location = new System.Drawing.Point(5, 282);
+            this.BtnConfig.Location = new System.Drawing.Point(5, 359);
             this.BtnConfig.Name = "BtnConfig";
             this.BtnConfig.Size = new System.Drawing.Size(153, 63);
             this.BtnConfig.TabIndex = 1;
@@ -143,7 +166,7 @@ namespace POO_22_09_Lanchonetinha
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(159, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(641, 75);
+            this.panelTitulo.Size = new System.Drawing.Size(730, 75);
             this.panelTitulo.TabIndex = 1;
             // 
             // panelgeral
@@ -153,7 +176,7 @@ namespace POO_22_09_Lanchonetinha
             this.panelgeral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelgeral.Location = new System.Drawing.Point(159, 75);
             this.panelgeral.Name = "panelgeral";
-            this.panelgeral.Size = new System.Drawing.Size(641, 375);
+            this.panelgeral.Size = new System.Drawing.Size(730, 452);
             this.panelgeral.TabIndex = 2;
             // 
             // Form1
@@ -161,13 +184,14 @@ namespace POO_22_09_Lanchonetinha
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(889, 527);
             this.Controls.Add(this.panelgeral);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelEsquerdo);
             this.IsMdiContainer = true;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelEsquerdo.ResumeLayout(false);
             this.panelbotões.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -184,6 +208,7 @@ namespace POO_22_09_Lanchonetinha
         private System.Windows.Forms.Panel panelTitulo;
         private System.Windows.Forms.Panel panelgeral;
         private FontAwesome.Sharp.IconButton BtnClientes;
+        private FontAwesome.Sharp.IconButton BtnProdutos;
     }
 }
 

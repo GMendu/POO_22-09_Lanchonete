@@ -12,6 +12,25 @@ namespace POO_22_09_Lanchonetinha
 {
     public partial class Form1 : Form
     {
+        private Form currentChildForm;
+        private void OpenChildForm(Form ChildForm)
+        {
+            if (currentChildForm != null)
+            {
+                //Open only form
+                currentChildForm.Close();
+            }
+            currentChildForm = ChildForm;
+            ChildForm.TopLevel = false;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
+            panelgeral.Controls.Add(ChildForm);
+            panelgeral.Tag = ChildForm;
+            ChildForm.BringToFront();
+            ChildForm.Show();
+            //lblTitleChildForm.Text = ChildForm.Text;
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -19,14 +38,18 @@ namespace POO_22_09_Lanchonetinha
 
         private void btnPedido_Click(object sender, EventArgs e)
         {
-            Form3 f3 = new Form3();
-            f3.Show();
+            OpenChildForm(new Form3());
         }
 
         private void BtnClientes_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.Show();
+            OpenChildForm(new Form2());
+        }
+
+        private void BtnProdutos_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form4());
+
         }
     }
 }

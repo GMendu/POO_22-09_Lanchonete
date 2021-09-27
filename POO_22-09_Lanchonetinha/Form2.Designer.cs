@@ -30,8 +30,6 @@ namespace POO_22_09_Lanchonetinha
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnMesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnEditar = new FontAwesome.Sharp.IconButton();
             this.BtnRemover = new FontAwesome.Sharp.IconButton();
             this.BtnAdicionar = new FontAwesome.Sharp.IconButton();
@@ -39,6 +37,8 @@ namespace POO_22_09_Lanchonetinha
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.labelNome = new System.Windows.Forms.Label();
             this.txtMesa = new System.Windows.Forms.ComboBox();
+            this.ColumnCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,20 +57,6 @@ namespace POO_22_09_Lanchonetinha
             this.dataGridView1.Size = new System.Drawing.Size(199, 380);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Editar);
-            // 
-            // ColumnMesa
-            // 
-            this.ColumnMesa.DataPropertyName = "idCliente";
-            this.ColumnMesa.FillWeight = 50.76142F;
-            this.ColumnMesa.HeaderText = "Mesa";
-            this.ColumnMesa.Name = "ColumnMesa";
-            // 
-            // ColumnCliente
-            // 
-            this.ColumnCliente.DataPropertyName = "NomeCliente";
-            this.ColumnCliente.FillWeight = 149.2386F;
-            this.ColumnCliente.HeaderText = "Cliente";
-            this.ColumnCliente.Name = "ColumnCliente";
             // 
             // BtnEditar
             // 
@@ -179,6 +165,20 @@ namespace POO_22_09_Lanchonetinha
             this.txtMesa.Size = new System.Drawing.Size(121, 23);
             this.txtMesa.TabIndex = 9;
             // 
+            // ColumnCliente
+            // 
+            this.ColumnCliente.DataPropertyName = "NomeCliente";
+            this.ColumnCliente.FillWeight = 149.2386F;
+            this.ColumnCliente.HeaderText = "Cliente";
+            this.ColumnCliente.Name = "ColumnCliente";
+            // 
+            // ColumnMesa
+            // 
+            this.ColumnMesa.DataPropertyName = "idCliente";
+            this.ColumnMesa.FillWeight = 50.76142F;
+            this.ColumnMesa.HeaderText = "Mesa";
+            this.ColumnMesa.Name = "ColumnMesa";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -210,8 +210,8 @@ namespace POO_22_09_Lanchonetinha
         private System.Windows.Forms.Label labelMesa;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label labelNome;
+        private System.Windows.Forms.ComboBox txtMesa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMesa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCliente;
-        private System.Windows.Forms.ComboBox txtMesa;
     }
 }

@@ -50,6 +50,7 @@ namespace POO_22_09_Lanchonetinha
             int id = int.Parse(txtMesa.Text);
             var elem = listarCliente.Where<Cliente>(x => x.idCliente == id).FirstOrDefault();
             int index = listarCliente.IndexOf(elem);
+            
 
             listarCliente[index].NomeCliente = txtCliente.Text;
             if (cliente.SalvarDados(listarCliente, @"C:\Bd\BdLanchonete.json"))
