@@ -34,6 +34,8 @@ namespace POO_22_09_Lanchonetinha
         public Form1()
         {
             InitializeComponent();
+            Form5 f5 = new Form5();
+            f5.Show();
         }
 
         private void btnPedido_Click(object sender, EventArgs e)

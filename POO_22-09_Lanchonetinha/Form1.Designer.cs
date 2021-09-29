@@ -190,8 +190,8 @@ namespace POO_22_09_Lanchonetinha
             this.Controls.Add(this.panelEsquerdo);
             this.IsMdiContainer = true;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelEsquerdo.ResumeLayout(false);
             this.panelbotões.ResumeLayout(false);
             this.ResumeLayout(false);
