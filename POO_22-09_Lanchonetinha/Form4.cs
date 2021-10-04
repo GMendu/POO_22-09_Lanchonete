@@ -35,31 +35,16 @@ namespace POO_22_09_Lanchonetinha
         }
 
 
-        private void BtnAdicionar_Click(object sender, EventArgs e)
+        private void BtnAdicionar_Click_1(object sender, EventArgs e)
         {
             CarregarDados();
             if (produto.SalvarDados(listProd, @"C:\Bd\BdProdutos.json"))
             {
                 MessageBox.Show("Dados cadastrados com sucesso!");
             }
-            txtID.Text = null;
+            txtID.Text = (produto.idProd+1).ToString();
             txtProduto.Text = null;
             txtPreco.Text = null;
-        }
-
-        private void BtnEditar_Click(object sender, EventArgs e)
-        {
-            int id = int.Parse(txtID.Text);
-            var elem = listProd.Where<Produtos>(x => x.idProd == id).FirstOrDefault();
-            int index = listProd.IndexOf(elem);
-
-            listProd[index].nomeProd = txtProduto.Text;
-            listProd[index].precoProd = double.Parse(txtPreco.Text);
-            if (produto.SalvarDados(listProd, @"C:\Bd\BdProdutos.json"))
-            {
-                MessageBox.Show("Dados salvos");
-            }
-            ExibirDados();
         }
 
         private void BtnRemover_Click(object sender, EventArgs e)
@@ -84,6 +69,21 @@ namespace POO_22_09_Lanchonetinha
                 txtProduto.Text = gridViewRow.Cells[1].Value.ToString();
                 txtPreco.Text = gridViewRow.Cells[2].Value.ToString();
             }
+        }
+
+        private void BtnEditar_Click_1(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtID.Text);
+            var elem = listProd.Where<Produtos>(x => x.idProd == id).FirstOrDefault();
+            int index = listProd.IndexOf(elem);
+
+            listProd[index].nomeProd = txtProduto.Text;
+            listProd[index].precoProd = double.Parse(txtPreco.Text);
+            if (produto.SalvarDados(listProd, @"C:\Bd\BdProdutos.json"))
+            {
+                MessageBox.Show("Dados salvos");
+            }
+            ExibirDados();
         }
     }
 }

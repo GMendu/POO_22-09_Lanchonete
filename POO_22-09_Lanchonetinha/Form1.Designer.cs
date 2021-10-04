@@ -127,6 +127,7 @@ namespace POO_22_09_Lanchonetinha
             this.BtnConfig.Text = "Configurações";
             this.BtnConfig.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnConfig.UseVisualStyleBackColor = false;
+            this.BtnConfig.Click += new System.EventHandler(this.BtnConfig_Click);
             // 
             // btnPedido
             // 

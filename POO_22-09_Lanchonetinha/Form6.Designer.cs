@@ -1,7 +1,7 @@
 ﻿
 namespace POO_22_09_Lanchonetinha
 {
-    partial class Form4
+    partial class Form6
     {
         /// <summary>
         /// Required designer variable.
@@ -29,46 +29,69 @@ namespace POO_22_09_Lanchonetinha
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelProduto = new System.Windows.Forms.Label();
-            this.txtProduto = new System.Windows.Forms.TextBox();
-            this.labelPreco = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.labelSenha = new System.Windows.Forms.Label();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.labelLogin = new System.Windows.Forms.Label();
             this.BtnAdicionar = new FontAwesome.Sharp.IconButton();
             this.BtnRemover = new FontAwesome.Sharp.IconButton();
             this.BtnEditar = new FontAwesome.Sharp.IconButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtPreco = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.labelID = new System.Windows.Forms.Label();
+            this.ColumnUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelProduto
+            // labelID
             // 
-            this.labelProduto.AutoSize = true;
-            this.labelProduto.Location = new System.Drawing.Point(333, 151);
-            this.labelProduto.Name = "labelProduto";
-            this.labelProduto.Size = new System.Drawing.Size(50, 15);
-            this.labelProduto.TabIndex = 16;
-            this.labelProduto.Text = "Produto";
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(350, 59);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(18, 15);
+            this.labelID.TabIndex = 29;
+            this.labelID.Text = "ID";
             // 
-            // txtProduto
+            // txtID
             // 
-            this.txtProduto.Location = new System.Drawing.Point(385, 148);
-            this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(121, 23);
-            this.txtProduto.TabIndex = 15;
+            this.txtID.Location = new System.Drawing.Point(385, 56);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(121, 23);
+            this.txtID.TabIndex = 28;
             // 
-            // labelPreco
+            // txtLogin
             // 
-            this.labelPreco.AutoSize = true;
-            this.labelPreco.Location = new System.Drawing.Point(333, 103);
-            this.labelPreco.Name = "labelPreco";
-            this.labelPreco.Size = new System.Drawing.Size(37, 15);
-            this.labelPreco.TabIndex = 14;
-            this.labelPreco.Text = "Preço";
+            this.txtLogin.Location = new System.Drawing.Point(385, 100);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(121, 23);
+            this.txtLogin.TabIndex = 27;
+            // 
+            // labelSenha
+            // 
+            this.labelSenha.AutoSize = true;
+            this.labelSenha.Location = new System.Drawing.Point(333, 151);
+            this.labelSenha.Name = "labelSenha";
+            this.labelSenha.Size = new System.Drawing.Size(39, 15);
+            this.labelSenha.TabIndex = 26;
+            this.labelSenha.Text = "Senha";
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(385, 148);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(121, 23);
+            this.txtSenha.TabIndex = 25;
+            // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.Location = new System.Drawing.Point(333, 103);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(37, 15);
+            this.labelLogin.TabIndex = 24;
+            this.labelLogin.Text = "Login";
             // 
             // BtnAdicionar
             // 
@@ -80,7 +103,7 @@ namespace POO_22_09_Lanchonetinha
             this.BtnAdicionar.Location = new System.Drawing.Point(380, 245);
             this.BtnAdicionar.Name = "BtnAdicionar";
             this.BtnAdicionar.Size = new System.Drawing.Size(105, 39);
-            this.BtnAdicionar.TabIndex = 13;
+            this.BtnAdicionar.TabIndex = 23;
             this.BtnAdicionar.Text = "Adicionar";
             this.BtnAdicionar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAdicionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -97,12 +120,12 @@ namespace POO_22_09_Lanchonetinha
             this.BtnRemover.Location = new System.Drawing.Point(106, 398);
             this.BtnRemover.Name = "BtnRemover";
             this.BtnRemover.Size = new System.Drawing.Size(105, 39);
-            this.BtnRemover.TabIndex = 12;
+            this.BtnRemover.TabIndex = 22;
             this.BtnRemover.Text = "Remover";
             this.BtnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnRemover.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnRemover.UseVisualStyleBackColor = true;
-            this.BtnRemover.Click += new System.EventHandler(this.BtnRemover_Click);
+            this.BtnRemover.Click += new System.EventHandler(this.BtnRemover_Click_1);
             // 
             // BtnEditar
             // 
@@ -114,7 +137,7 @@ namespace POO_22_09_Lanchonetinha
             this.BtnEditar.Location = new System.Drawing.Point(11, 398);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(89, 39);
-            this.BtnEditar.TabIndex = 11;
+            this.BtnEditar.TabIndex = 21;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -128,77 +151,54 @@ namespace POO_22_09_Lanchonetinha
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
-            this.ColumnProd,
-            this.ColumnPreco});
+            this.ColumnUser,
+            this.ColumnSenha});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(199, 380);
-            this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Editar);
             // 
             // ColumnID
             // 
-            this.ColumnID.DataPropertyName = "idProd";
+            this.ColumnID.DataPropertyName = "idUser";
             this.ColumnID.FillWeight = 50.76142F;
             this.ColumnID.HeaderText = "ID";
             this.ColumnID.Name = "ColumnID";
             // 
-            // ColumnProd
+            // ColumnUser
             // 
-            this.ColumnProd.DataPropertyName = "NomeProd";
-            this.ColumnProd.FillWeight = 149.2386F;
-            this.ColumnProd.HeaderText = "Produto";
-            this.ColumnProd.Name = "ColumnProd";
+            this.ColumnUser.DataPropertyName = "loginUser";
+            this.ColumnUser.FillWeight = 149.2386F;
+            this.ColumnUser.HeaderText = "Login";
+            this.ColumnUser.Name = "ColumnUser";
             // 
-            // ColumnPreco
+            // ColumnSenha
             // 
-            this.ColumnPreco.DataPropertyName = "precoProd";
-            this.ColumnPreco.HeaderText = "Preço";
-            this.ColumnPreco.Name = "ColumnPreco";
+            this.ColumnSenha.DataPropertyName = "senhaUser";
+            this.ColumnSenha.HeaderText = "Senha";
+            this.ColumnSenha.Name = "ColumnSenha";
             // 
-            // txtPreco
-            // 
-            this.txtPreco.Location = new System.Drawing.Point(385, 100);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(121, 23);
-            this.txtPreco.TabIndex = 17;
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(385, 56);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(121, 23);
-            this.txtID.TabIndex = 18;
-            // 
-            // labelID
-            // 
-            this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(350, 59);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(18, 15);
-            this.labelID.TabIndex = 19;
-            this.labelID.Text = "ID";
-            // 
-            // Form4
+            // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(564, 450);
+            this.ClientSize = new System.Drawing.Size(668, 450);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.txtPreco);
-            this.Controls.Add(this.labelProduto);
-            this.Controls.Add(this.txtProduto);
-            this.Controls.Add(this.labelPreco);
+            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.labelSenha);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.BtnAdicionar);
             this.Controls.Add(this.BtnRemover);
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form4";
-            this.Text = "Form4";
+            this.Name = "Form6";
+            this.Text = "Form6";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -206,18 +206,19 @@ namespace POO_22_09_Lanchonetinha
         }
 
         #endregion
-        private System.Windows.Forms.Label labelProduto;
-        private System.Windows.Forms.TextBox txtProduto;
-        private System.Windows.Forms.Label labelPreco;
+
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.Label labelSenha;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.Label labelLogin;
         private FontAwesome.Sharp.IconButton BtnAdicionar;
         private FontAwesome.Sharp.IconButton BtnRemover;
         private FontAwesome.Sharp.IconButton BtnEditar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtPreco;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPreco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSenha;
     }
 }

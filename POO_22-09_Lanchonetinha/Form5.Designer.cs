@@ -30,7 +30,7 @@ namespace POO_22_09_Lanchonetinha
         private void InitializeComponent()
         {
             this.txtLogin = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogar = new System.Windows.Forms.Button();
             this.labelLogin = new System.Windows.Forms.Label();
             this.labelSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -43,14 +43,15 @@ namespace POO_22_09_Lanchonetinha
             this.txtLogin.Size = new System.Drawing.Size(100, 23);
             this.txtLogin.TabIndex = 0;
             // 
-            // button1
+            // btnLogar
             // 
-            this.button1.Location = new System.Drawing.Point(205, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Logar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLogar.Location = new System.Drawing.Point(205, 133);
+            this.btnLogar.Name = "btnLogar";
+            this.btnLogar.Size = new System.Drawing.Size(75, 23);
+            this.btnLogar.TabIndex = 2;
+            this.btnLogar.Text = "Logar";
+            this.btnLogar.UseVisualStyleBackColor = true;
+            this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
             // labelLogin
             // 
@@ -58,7 +59,7 @@ namespace POO_22_09_Lanchonetinha
             this.labelLogin.Location = new System.Drawing.Point(88, 41);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(34, 15);
-            this.labelLogin.TabIndex = 2;
+            this.labelLogin.TabIndex = 3;
             this.labelLogin.Text = "login";
             // 
             // labelSenha
@@ -75,18 +76,19 @@ namespace POO_22_09_Lanchonetinha
             this.txtSenha.Location = new System.Drawing.Point(128, 85);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(100, 23);
-            this.txtSenha.TabIndex = 3;
+            this.txtSenha.TabIndex = 1;
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(354, 201);
             this.ControlBox = false;
             this.Controls.Add(this.labelSenha);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.labelLogin);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.txtLogin);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -102,7 +104,7 @@ namespace POO_22_09_Lanchonetinha
         #endregion
 
         private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogar;
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelSenha;
         private System.Windows.Forms.TextBox txtSenha;

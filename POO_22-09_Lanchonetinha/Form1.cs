@@ -53,5 +53,10 @@ namespace POO_22_09_Lanchonetinha
             OpenChildForm(new Form4());
 
         }
+
+        private void BtnConfig_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form6());
+        }
     }
 }

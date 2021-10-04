@@ -3,49 +3,52 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Windows.Forms;
+using System.Windows;
 
 namespace POO_22_09_Lanchonetinha
 {
-    class Cliente
+    class Login
     {
-        public int idCliente { get; set; }
-        public string NomeCliente { get; set; }
-        public int numMesa { get; set; }
-        public bool SalvarDados(List<Cliente> clientes, string path)
+        public int idUser { get; set; }
+        public string loginUser { get; set; }
+        public string senhaUser { get; set; }
+
+
+
+        public bool SalvarDados(List<Login> usuario, string path)
         {
-            var strJson = JsonConvert.SerializeObject(clientes);
+            var strJson = JsonConvert.SerializeObject(usuario);
             return SalvarArquivo(strJson, path);
         }
-        public static Cliente ListarClient(string path)
+        public static Login ListarUser(string path)
         {
-            var strJson = OpenFileCliente(path);
+            var strJson = OpenFileUsuarios(path);
             if (strJson.Substring(0, 5) != "Falha")
             {
-                return JsonConvert.DeserializeObject<Cliente>(strJson);
+                return JsonConvert.DeserializeObject<Login>(strJson);
             }
             else
             {
-                var cliente = new Cliente();
-                cliente.NomeCliente = strJson;
-                return cliente;
+                var usuario = new Login();
+                usuario.loginUser = strJson;
+                return usuario;
             }
         }
-        public static List<Cliente> carregarCliente(string path)
+        public static List<Login> carregarUsuarios(string path)
         {
-            var strJson = OpenFileCliente(path);
+            var strJson = OpenFileUsuarios(path);
             if (strJson.Substring(0, 5) != "Falha")
             {
-                return JsonConvert.DeserializeObject<List<Cliente>>(strJson);
+                return JsonConvert.DeserializeObject<List<Login>>(strJson);
             }
             else
             {
-                var listClientes = new List<Cliente>();
-                var cliente = new Cliente();
-                cliente.NomeCliente = strJson;
-                listClientes.Add(cliente);
-                cliente.NomeCliente = strJson;
-                return listClientes;
+                var listUser = new List<Login>();
+                var usuario = new Login();
+                usuario.loginUser = strJson;
+                listUser.Add(usuario);
+                usuario.loginUser = strJson;
+                return listUser;
             }
         }
         private bool SalvarArquivo(string strJson, string path)
@@ -65,7 +68,7 @@ namespace POO_22_09_Lanchonetinha
                 return false;
             }
         }
-        private static string OpenFileCliente(string path)
+        private static string OpenFileUsuarios(string path)
         {
             try
             {

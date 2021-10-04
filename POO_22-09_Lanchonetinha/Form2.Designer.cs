@@ -37,8 +37,11 @@ namespace POO_22_09_Lanchonetinha
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.labelNome = new System.Windows.Forms.Label();
             this.txtMesa = new System.Windows.Forms.ComboBox();
-            this.ColumnCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.CollumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +51,7 @@ namespace POO_22_09_Lanchonetinha
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Maroon;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CollumnID,
             this.ColumnMesa,
             this.ColumnCliente});
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
@@ -165,19 +169,42 @@ namespace POO_22_09_Lanchonetinha
             this.txtMesa.Size = new System.Drawing.Size(121, 23);
             this.txtMesa.TabIndex = 9;
             // 
-            // ColumnCliente
+            // labelID
             // 
-            this.ColumnCliente.DataPropertyName = "NomeCliente";
-            this.ColumnCliente.FillWeight = 149.2386F;
-            this.ColumnCliente.HeaderText = "Cliente";
-            this.ColumnCliente.Name = "ColumnCliente";
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(334, 62);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(18, 15);
+            this.labelID.TabIndex = 11;
+            this.labelID.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(386, 59);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(121, 23);
+            this.txtID.TabIndex = 10;
+            // 
+            // CollumnID
+            // 
+            this.CollumnID.DataPropertyName = "idCliente";
+            this.CollumnID.FillWeight = 45.68528F;
+            this.CollumnID.HeaderText = "ID";
+            this.CollumnID.Name = "CollumnID";
             // 
             // ColumnMesa
             // 
-            this.ColumnMesa.DataPropertyName = "idCliente";
-            this.ColumnMesa.FillWeight = 50.76142F;
+            this.ColumnMesa.DataPropertyName = "numMesa";
+            this.ColumnMesa.FillWeight = 64.54688F;
             this.ColumnMesa.HeaderText = "Mesa";
             this.ColumnMesa.Name = "ColumnMesa";
+            // 
+            // ColumnCliente
+            // 
+            this.ColumnCliente.DataPropertyName = "NomeCliente";
+            this.ColumnCliente.FillWeight = 189.7679F;
+            this.ColumnCliente.HeaderText = "Cliente";
+            this.ColumnCliente.Name = "ColumnCliente";
             // 
             // Form2
             // 
@@ -185,6 +212,8 @@ namespace POO_22_09_Lanchonetinha
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(560, 450);
+            this.Controls.Add(this.labelID);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtMesa);
             this.Controls.Add(this.labelNome);
             this.Controls.Add(this.txtCliente);
@@ -211,6 +240,9 @@ namespace POO_22_09_Lanchonetinha
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.ComboBox txtMesa;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CollumnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMesa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCliente;
     }
